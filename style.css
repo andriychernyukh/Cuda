@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 html{
     font-family: 'Titillium Web', sans-serif;
 }
@@ -190,7 +193,7 @@ body{
 }
 .team-item-block .section-item-content {
     color: #3c4761;  
-    max-width: 200px;
+    max-width: 230px;
 }
 .team-item-block .section-item-content.position {
     color: #30bae7;  
@@ -305,14 +308,14 @@ body{
 }
 .portfolio-item-block {
     display: inline-block;
-    width: 560px;
+    max-width: 560px;
     margin: 0 auto 30px auto;
   }
 
   .portfolio-item-block .portfolio-item-img {
     margin: 0 auto;
-    width: 500px;
-    height: 300px;
+    max-width: 500px;
+    max-height: 300px;
   }
   .portfolio-item-block-desc {
     padding: 15px;
@@ -326,6 +329,7 @@ body{
 /* -----------------------------------END of Styles for Portfolio section------------------------*/
 
 /* -----------------------------------Styles for Testimonials section------------------------*/
+/* -----------------------------------With using BEM a little bit----------------------------*/
 
 .testimonials-section{
     background-color: #d74680;
@@ -334,33 +338,36 @@ body{
     height: 100%;
     text-align: center;
 }
+.testimonials-item-block-holder {
+    display: flex;
+    flex-wrap: wrap;
+}
 .testimonials-item-block {
-    display: inline-block; 
-    width: 560px;
+    display: flex; 
+    flex-wrap: wrap;
+    max-width: 560px;
     margin: 0 auto 30px auto;
 }
-.testimonials-item-img {
-    display: inline-block;
-    margin: 0 auto  30px 0;
+.testimonials-item-block__img {
+    margin: 0 0  30px 0;
     width: 96px;
     height: 96px;
 }
-.testimonials-item-block-desc {
-    display: inline-block;
-    max-width: 75%;
-    padding-left: 15px;
+.testimonials-item-block__desc {
+    max-width: 80%;
+    padding: 0 15px 0 15px;
     text-align: left;
     margin: 0;
 }
-.testimonials-item-block-desc .section-item-content {
+.testimonials-item-block__desc .section-item-content {
     display: block;
     padding-bottom: 15px;
     font-style: italic;
 }
-.testimonials-item-block-desc .section-item-tittle {
+.testimonials-item-block__desc .section-item-tittle {
     display: block;
 }
-.testimonials-item-block-desc .section-item-content.position {
+.testimonials-item-block__desc .section-item-content.position {
     display: block;
     color: #ffdd99; 
 }
@@ -401,7 +408,6 @@ body{
     border: none;
     border-radius: 6px;
     background-color: #273a71;
-    box-sizing: border-box;
     margin: 20px;
 }  
 
