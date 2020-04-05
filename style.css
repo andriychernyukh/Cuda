@@ -7,7 +7,7 @@ html{
 body{
     margin: 0;
     }
-    section{
+    .section{
         padding-top:120px;
         padding-bottom: 120px;
     }
@@ -79,69 +79,58 @@ body{
    
   /* -----------------------------------------------Styles for header section-------------------------------*/
     .header-section{
-        height: 596px;
+        /*height: 596px;*/
         background-color: #864f9c;
     }
 
-    .header-holder {
-        position: relative;
-        height: 30%;
-    }
-
-    .header-logo {
-        width: 50%;
-        position: absolute;
-        left: 10px;
-        top: 50%;
-        transform: translate(0, -50%);
+    .header-section-holder {
+        padding: 0 10px;
     }
 
     .header-nav {
-        width: 50%;
-        text-align: right;
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
-        right: 10px;     
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
     }
-      
-    .header-nav-item {
+
+    .header-nav-logo {
+        margin: 5px 0;
+           }
+    .header-nav-menu {   
+        padding: 0; 
+        margin: 0;  
+    }
+    .header-nav-menu-item {
+        display: inline-block;
+        padding: 8px 15px;
+        margin: 5px 0;
+    }
+    .header-nav-menu-item-link {
         font-size: 16px;
         line-height: 18px;
         color: #ffffff;
         font-weight: 400;
         text-align: center;
         text-decoration: none;
-        text-transform: uppercase;
-        padding: 8px 15px;  
+        text-transform: uppercase;  
     }
-      
-      .header-nav-item:hover {
+
+    .header-nav-menu-item:hover {
         border-radius: 4px;
         background-color: #633a79;
       }
 
-      .header-welcome-section-holder {
-        position: relative;
-        height: 70%;
-      }
+    .header-tittle.h1-section-tittle {
+        margin: 50px auto 0 auto;
+    }
 
-      .header-btn {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 50px auto;
-        width: 293px;
-        height: 70px;
-        border: none;
-        border-radius: 6px;
-        background-color: #eb7d4b;
+    .header-btn.btn {
+        display: block;
+        margin: 50px auto 0 auto;
         text-align: center;
-        font-size: 18px;
-        letter-spacing: 1px;
         color: #ffffff;
-        font-weight: 600;
-        cursor: pointer;
+        background-color: #eb7d4b;
     }
 
 /* --------------------------------------Styles for Services section------------------------*/
@@ -153,11 +142,12 @@ body{
 .services-section-holder {
     height: 100%;
     text-align: center;
+    padding: 0 10px;
   }
 .service-item-block {
     display: inline-block;
     vertical-align: top;
-    width: 280px;
+    width: 270px;
   }
 
 .service-item-block .service-item-img {
@@ -181,6 +171,7 @@ body{
 .team-section-holder {
     height: 100%;
     text-align: center;
+    padding: 0 10px;
 }
 .team-section-holder .h1-section-tittle {
     color: #3c4761;
@@ -202,7 +193,7 @@ body{
     position: relative;
     display: inline-block;
     vertical-align: top;
-    width: 280px;
+    width: 270px;
     height: 500px;
   }
 
@@ -223,7 +214,10 @@ body{
     bottom: 0;
     right: 0;
 }
-.social-block-img {
+.social-block__link {
+    text-decoration: none;
+}
+.social-block__img {
     display: inline-block;
     width: 32px;
     height: 32px;
@@ -239,6 +233,7 @@ body{
 .skills-section-holder {
     height: 100%;
     text-align: center;
+    padding: 0 10px;
 }
 .skills-section-holder .h1-section-tittle {
     color: #3c4761;
@@ -248,7 +243,7 @@ body{
 }
 .skills-item-block {
     display: inline-block;
-    width: 280px;
+    width: 270px;
   }
 .skills-item-img {
     margin: 30px auto;
@@ -269,6 +264,7 @@ body{
 .portfolio-section-holder {
     height: 100%;
     text-align: center;
+    padding: 0 10px;
 }
 .portfolio-categories-btn-block {
     text-align: center;
@@ -283,7 +279,7 @@ body{
     width: 70px;
     border-radius: 4px;
     padding: 8px 8px;
-    margin: 0 5px;
+    margin: 5px 5px;
 }
 .portfolio-categories-btn-block ul>li:hover {
     background-color: #ffffff;
@@ -308,7 +304,7 @@ body{
 }
 .portfolio-item-block {
     display: inline-block;
-    max-width: 560px;
+    max-width: 540px;
     margin: 0 auto 30px auto;
   }
 
@@ -323,8 +319,11 @@ body{
   }
 
   .portfolio-section-holder .btn {
+    display: block;
+    margin: 0 auto;
     color: #ffffff;
     background-color: #17c2a4;
+
   }
 /* -----------------------------------END of Styles for Portfolio section------------------------*/
 
@@ -337,28 +336,29 @@ body{
 .testimonials-section-holder{
     height: 100%;
     text-align: center;
+    padding: 0 10px;
 }
 .testimonials-item-block-holder {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 .testimonials-item-block {
     display: flex; 
     flex-wrap: wrap;
-    max-width: 560px;
+    justify-content: space-between;
+    width: 500px;
     margin: 0 auto 30px auto;
 }
 .testimonials-item-block__img {
-    margin: 0 0  30px 0;
     width: 96px;
     height: 96px;
+    margin-bottom: 10px;
 }
 .testimonials-item-block__desc {
-    max-width: 80%;
-    padding: 0 15px 0 15px;
+    max-width: 380px;
     text-align: left;
-    margin: 0;
-}
+    }
 .testimonials-item-block__desc .section-item-content {
     display: block;
     padding-bottom: 15px;
